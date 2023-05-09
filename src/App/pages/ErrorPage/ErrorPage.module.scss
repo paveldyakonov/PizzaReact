@@ -1,0 +1,23 @@
+@import "@styles/variables.scss";
+
+.page {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        text-align: center;
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    &__to_main {
+        color: $primary-color;
+
+        & a {
+            color: $orange-color;
+        }
+    }
+}

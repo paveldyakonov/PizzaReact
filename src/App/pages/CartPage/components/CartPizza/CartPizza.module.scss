@@ -1,0 +1,114 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #F4F4F4;
+
+    &__img {
+        width: 80px;
+        height: 80px;
+    }
+
+    &__info {
+        width: 40%
+    }
+
+    &__title {
+        @include fontInfo(700);
+        color: $primary-color;
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        @include fontInfo(400);
+        color: $secondary-color;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &__btn {
+        transition: $transition;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 8px;
+        width: 32px;
+        height: 32px;
+        background: #FFFFFF;
+        border: 2px solid $orange-color;
+        border-radius: 50%;
+        color: $orange-color;
+        @include fontInfo(400);
+        font-size: 22px;
+
+        &:disabled {
+            opacity: 0.4;
+            border-color: #787878;
+
+            &:hover {
+                opacity: 0.4;
+                border-color: #787878;
+                background-color: white;
+                color: $orange-color;
+            }
+        }
+
+        &:hover {
+            background-color: $orange-color;
+            color: white;
+        }
+    }
+
+    & .count {
+        @include fontInfo(700);
+        color: $primary-color;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    &__price {
+        @include fontInfo(700);
+        color: $primary-color;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    &__delete-btn {
+        transition: $transition;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #FFFFFF;
+        border: 2px solid #D3D3D3;
+        border-radius: 50%;
+        color: #D3D3D3;
+
+        &:hover {
+            background: $secondary-color;
+            border: 1px solid #D3D3D3;
+            color: white;
+        }
+    }
+}

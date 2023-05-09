@@ -1,0 +1,18 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.filter {
+    display: flex;
+    margin-top: 53px;
+    margin-right: 3.5vw;
+    margin-left: auto;
+
+    &__text {
+        color: $primary-color;
+        white-space: nowrap;
+        @include fontInfo(700);
+        font-size: 14px;
+        line-height: 17px;
+        margin-right: 8px;
+    }
+}

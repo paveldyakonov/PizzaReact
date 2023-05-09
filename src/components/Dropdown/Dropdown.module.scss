@@ -1,0 +1,56 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.dropdown {
+    &__input {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+        border-bottom: 1px dotted $orange-color;
+        height: 17px;
+        @include fontInfo(400);
+        font-size: 14px;
+        line-height: 17px;
+        color: $orange-color;
+    }
+
+    &__list {
+        position: absolute;
+        margin-top: 10px;
+        right: 30px;
+        background-color: white;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        &-value {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: 132px;
+            height: 38px;
+            font-size: 14px;
+            line-height: 17px;
+            @include fontInfo(400);
+            padding-left: 14px;
+            color: $primary-color;
+
+            &:hover {
+                background-color: rgba(254, 95, 30, 0.05);
+                font-size: 14px;
+                line-height: 17px;
+                @include fontInfo(700);
+                color: $orange-color;
+                transition: all .2s ease-in-out;
+            }
+
+            &.selected {
+                background-color: rgba(254, 95, 30, 0.05);
+                font-size: 14px;
+                line-height: 17px;
+                @include fontInfo(700);
+                color: $orange-color;
+            }
+        }
+    }
+}

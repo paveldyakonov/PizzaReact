@@ -1,0 +1,39 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.root {
+    display: flex;
+    list-style-type: none;
+
+    & a {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        color: $orange-color;
+        font-size: 20px;
+        @include fontInfo();
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid $orange-color;
+
+        &:hover {
+            color: azure;
+            background-color: $orange-color;
+            transition: $transition;
+        }
+    }
+
+    :global {
+        .selected {
+            & a {
+                color: azure;
+                background-color: $orange-color;
+                transition: $transition;
+            }
+        }
+    }
+}

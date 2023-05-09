@@ -1,0 +1,161 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.card {
+    width: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        box-shadow: $box-shadow;
+        transition: box-shadow .3s ease-in-out;
+    }
+
+    &__img {
+        border-radius: 20px;
+        width: 280px;
+        height: 280px;
+        margin-bottom: 11px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__name {
+        @include fontInfo(800);
+        color: $primary-color;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    &__filter {
+        width: 280px;
+        height: 85px;
+        background-color: #F3F3F3;
+        border-radius: 10px;
+        margin-bottom: 17px;
+        padding: 7px 6px 0px 6px;
+        margin-left: auto;
+        margin-right: auto;
+
+        & .filter-dough {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 7px;
+
+            & .thin {
+                display: flex;
+                cursor: pointer;
+                width: 131px;
+                @include fontInfo(700);
+                height: 32px;
+                font-size: 14px;
+                line-height: 17px;
+                color: $primary-color;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                }
+            }
+
+            & .traditionally {
+                display: flex;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                width: 131px;
+                @include fontInfo(700);
+                height: 32px;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: $primary-color;
+
+                &:hover {
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                }
+            }
+
+            & .active {
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+            }
+        }
+
+        & .filter-size {
+            display: flex;
+            justify-content: space-around;
+
+            & div {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 86px;
+                height: 32px;
+                @include fontInfo(700);
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: $primary-color;
+
+                &:hover {
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                }
+            }
+
+            & .active {
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+
+        & .price {
+            @include fontInfo(700);
+            font-size: 22px;
+            line-height: 27px;
+            color: $primary-color;
+        }
+
+        & .btn {
+            cursor: pointer;
+            width: 132px;
+            height: 40px;
+            border: 1px solid $orange-color;
+            border-radius: 30px;
+            @include fontInfo(700);
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: $orange-color;
+            vertical-align: middle;
+            background-color: white;
+
+            &:hover {
+                background-color: $orange-color;
+                color: white;
+                transition: background-color .3s ease-in-out;
+            }
+        }
+    }
+}

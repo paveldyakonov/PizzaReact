@@ -1,0 +1,50 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    box-sizing: content-box;
+    width: 150px;
+    cursor: pointer;
+    height: 50px;
+    background: $orange-color;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    //margin-right: 38px;
+
+    &:hover {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+        transition: $transition;
+    }
+
+    &__price {
+        height: 19px;
+        padding-right: 25px;
+        font-size: 16px;
+        line-height: 19px;
+        @include fontInfo(700);
+        color: white;
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
+        margin-right: 25px;
+    }
+
+    &__cart {
+        display: flex;
+        gap: 5px;
+        font-size: 16px;
+        line-height: 19px;
+        @include fontInfo(700);
+        color: white;
+    }
+
+    & .cart__img {
+        width: 16px;
+        height: 16px;
+    }
+}

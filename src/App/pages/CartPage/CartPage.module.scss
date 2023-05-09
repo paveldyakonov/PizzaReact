@@ -1,0 +1,130 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins.scss";
+
+.cart-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.cart-block {
+    width: 70vw;
+    max-width: 1000px;
+    transition: all .3s ease-in-out;
+
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+        @include fontInfo(500);
+        color: $secondary-color;
+        font-size: 16px;
+        line-height: 19px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #F4F4F4;
+
+        & .clear {
+            transition: $transition;
+            cursor: pointer;
+            width: 150px;
+            height: 30px;
+            background: #FFFFFF;
+            border: 1px solid #D3D3D3;
+            border-radius: 30px;
+            color: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: $secondary-color;
+                border: 1px solid #D3D3D3;
+                border-radius: 30px;
+                color: white;
+            }
+        }
+    }
+
+    &__items {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__totals {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        @include fontInfo(500);
+        color: $primary-color;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 40px;
+
+        & .total {
+            @include fontInfo(700);
+            color: $primary-color;
+            font-size: 19px;
+            line-height: 19px;
+        }
+
+        & .sum {
+            @include fontInfo(700);
+            color: $orange-color;
+            font-size: 19px;
+            line-height: 19px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        & .prev {
+            cursor: pointer;
+            width: 211px;
+            height: 55px;
+            background: #FFFFFF;
+            border: 1px solid #D3D3D3;
+            border-radius: 30px;
+            color: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $transition;
+
+            &:hover {
+                background: $secondary-color;
+                border: 1px solid #D3D3D3;
+                border-radius: 30px;
+                color: white;
+            }
+        }
+
+        & .buy {
+            transition: $transition;
+            cursor: pointer;
+            width: 211px;
+            height: 55px;
+            background: $orange-color;
+            border: 1px solid $orange-color;
+            border-radius: 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: white;
+                color: $orange-color;
+            }
+        }
+    }
+
+}

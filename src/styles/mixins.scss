@@ -1,0 +1,5 @@
+@mixin fontInfo($weight: 500) {
+    font-family: 'Eudoxus Sans', sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+}
