@@ -12,11 +12,11 @@ import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-  <Router.BrowserRouter>
+  <Router.HashRouter>
     <Provider store={store}>
       <App />
     </Provider>
-  </Router.BrowserRouter>,
+  </Router.HashRouter>,
 );
 
 if (module.hot) {
