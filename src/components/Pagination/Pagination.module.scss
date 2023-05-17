@@ -19,12 +19,6 @@
         height: 40px;
         padding: 10px;
         border: 1px solid $orange-color;
-
-        &:hover {
-            color: azure;
-            background-color: $orange-color;
-            transition: $transition;
-        }
     }
 
     :global {

@@ -9,6 +9,8 @@
     flex-direction: column;
     justify-content: space-between;
 
+    -webkit-tap-highlight-color: transparent;
+
     &:hover {
         box-shadow: $box-shadow;
         transition: box-shadow .3s ease-in-out;
